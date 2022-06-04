@@ -24,7 +24,7 @@ export class EventService {
   getEvents(): Observable<TMEvent[]> {
     return this.http.get<TMEvent[]>(this.eventUrl)
       .pipe(
-        tap(_ => this.log('fetched heroes')),
+        tap(_ => this.log('fetched events')),
         catchError(this.handleError<TMEvent[]>('getEvents', []))
       );
   }
@@ -33,7 +33,7 @@ export class EventService {
   getEvent(id: string): Observable<TMEvent> {
     const url = `${this.eventUrl}/${id}`;
     return this.http.get<TMEvent>(url).pipe(
-      tap(_ => this.log(`fetched hero id=${id}`)),
+      tap(_ => this.log(`fetched event id=${id}`)),
       catchError(this.handleError<TMEvent>(`getEvent id=${id}`))
     );
   }
