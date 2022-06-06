@@ -4,7 +4,14 @@
 name: Build and deploy Node.js app to Azure Web App - sturdy-system-app
 
 on:
-  [workflow_dispatch]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 
 jobs:
   build:
