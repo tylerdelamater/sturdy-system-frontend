@@ -1,13 +1,8 @@
-.logo {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 25px;
+.headerarea {
+  min-height: 80px;
+  max-height: 200px;
 }
 
-.logo img {
-  width: 12%;
-}  
 
 .mainarea {
   display: flex;
